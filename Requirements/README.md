@@ -8,6 +8,6 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 
 ## Use-Cases Diagram (UML)
-![first](https://github.com/montiqum/My_Carbon_Footprint_Calculator/Requirements/Melanie_Montique_Use_Case_Diagram.png)
+![UML](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram.png)
 
 ## Requirements
