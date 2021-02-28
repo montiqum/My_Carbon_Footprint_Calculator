@@ -2,7 +2,7 @@
 User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## User Stories
-[User Stories](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/User_Stories)
+[User Stories](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/User_Stories.md)
 
 1.	As an environmentalist, I need a website that will bring awareness to  the general public about carbon emissions and its effect on the environment.
 
@@ -11,7 +11,7 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 3.	As an environmental researcher, I need data about the average person’s carbon emissions so I can promote going green with reliable statistics.
 
 ## Use Cases
-[Use Cases](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Use_Cases)
+[Use Cases](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Use_Cases.md)
 
 1.	Given a new user, when the user does not have a user ID, then generate and assign a new user ID and password.
 
@@ -30,13 +30,13 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 8.	Given any data provided by the user, when the user selects the next page, then store the information provide in the calculator’s database.
 
 ## Use-Cases Diagram (UML)
-[Use Case Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Use_Case_Diagram)
+[Use Case Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Use_Case_Diagram.md)
 
 ![UML](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram.png)
 
 
 ## Requirements
-[Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Requirements)
+[Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Requirements.md)
 1. The system shall ask the current user if he/she is a new user, existing user, or guest.
    1. (1.1) The system shall provide means for an existing user to enter his/her user ID and password.
       1. (1.1.1) Given a user ID, the system shall verify the validity of the user ID and password.
