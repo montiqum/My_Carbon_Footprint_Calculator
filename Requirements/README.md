@@ -2,7 +2,7 @@
 User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## User Stories
-
+![User Stories](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/User_Stories)
 
 ## Use Cases
 
