@@ -35,7 +35,7 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## Requirements
 [Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Requirements)
-
+<ol>
 1. The system shall ask the current user if he/she is a new user, existing user, or guest.
    1.1 The system shall provide means for an existing user to enter his/her user ID and password.
         1.1.1 Given a user ID, the system shall verify the validity of the user ID and password.
@@ -56,3 +56,4 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 3. The system shall be developed with C# language, SQL and ASP.NET .
      3.1 The system shall be hosted in Azure and GitHub.
+</ol>
