@@ -3,7 +3,6 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## User Stories
 [User Stories](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/User_Stories)
-# User Stories
 
 1.	As an environmentalist, I need a website that will bring awareness to  the general public about carbon emissions and its effect on the environment.
 
@@ -13,7 +12,6 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## Use Cases
 [Use Cases](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Use_Cases)
-# Use Cases
 
 1.	Given a new user, when the user does not have a user ID, then generate and assign a new user ID and password.
 
@@ -37,7 +35,6 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## Requirements
 [Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Requirements)
-# Requirements
 
 1. The system shall ask the current user if he/she is a new user, existing user, or guest.
    1.1 The system shall provide means for an existing user to enter his/her user ID and password.
