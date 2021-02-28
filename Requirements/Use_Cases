@@ -1,3 +1,5 @@
+# Use Cases
+
 1.	Given a new user, when the user does not have a user ID, then generate and assign a new user ID and password.
 
 2.	Given the current user, when the user selects ‘Use system as guest’, then allow the user access to the calculator.
