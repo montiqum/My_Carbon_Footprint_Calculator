@@ -30,7 +30,7 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 8.	Given any data provided by the user, when the user selects the next page, then store the information provide in the calculator’s database.
 
 ## Use-Cases Diagram (UML)
-[Use Case Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram)
+[Use Case Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Use_Case_Diagram)
 
 ![UML](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram.png)
 
