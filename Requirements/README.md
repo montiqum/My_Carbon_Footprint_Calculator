@@ -30,9 +30,10 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 8.	Given any data provided by the user, when the user selects the next page, then store the information provide in the calculator’s database.
 
 ## Use-Cases Diagram (UML)
+[Use Case Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram)
+
 ![UML](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram.png)
 
-[Use Case Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Melanie_Montique_Use_Case_Diagram)
 
 ## Requirements
 [Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Requirements)
@@ -56,29 +57,6 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
   
 3. The system shall be developed with C# language, SQL and ASP.NET .
    1. The system shall be hosted in Azure and GitHub.
-
-<ol>
-<sl> 1. The system shall ask the current user if he/she is a new user, existing user, or guest.
-         1.1. The system shall provide means for an existing user to enter his/her user ID and password.
-                  1.1.1 Given a user ID, the system shall verify the validity of the user ID and password.
-                  1.1.2 Given authorization, the system shall allow the user access to the calculator.
-                  1.1.3 The system shall provide the new user with a new user ID and allow the new user to select a password.
-                  1.1.4 The system shall give access to the calculator when the user selects ‘Use system as guest’.
-         1.2. The system shall provide calculate every user’s carbon footprint.
-                  1.2.1 The system shall display the user’s result, along with a graphical comparison to other users.
-                  1.2.2 The system shall allow the user means to save his/her results as a pdf or image.
-         1.3. The system shall display information and links about reducing Carbon emission in the 
-       ‘Did You Know’ display box.
-
-<sl> 2. The system shall save the data provided by the user in the Calculator database.
-     2.1 Given data from a guest user the system shall store the data in the database marking the 
-         user Id value with an asterisk. 
-     2.2 The system shall provide easy access to pages by means of page tabs.
-     2.3 The system shall provide drop down selections for user input vs. the user typing answers.
-
-<sl> 3. The system shall be developed with C# language, SQL and ASP.NET .
-     3.1 The system shall be hosted in Azure and GitHub.
-</ol>
 
 
 [Back to Main](https://github.com/montiqum/My_Carbon_Footprint_Calculator)
