@@ -47,11 +47,15 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
       2. The system shall allow the user means to save his/her results as a pdf or image.
    3. The system shall display information and links about reducing Carbon emission in the 
       ‘Did You Know’ display box.
+      
 2. The system shall save the data provided by the user in the Calculator database.
    1. Given data from a guest user the system shall store the data in the database marking the 
       user Id value with an asterisk. 
    2. The system shall provide easy access to pages by means of page tabs.
    3. The system shall provide drop down selections for user input vs. the user typing answers.
+  
+3. The system shall be developed with C# language, SQL and ASP.NET .
+   1. The system shall be hosted in Azure and GitHub.
 
 <ol>
 <sl> 1. The system shall ask the current user if he/she is a new user, existing user, or guest.
