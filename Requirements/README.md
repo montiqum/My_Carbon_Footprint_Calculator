@@ -37,8 +37,8 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 ## Requirements
 [Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/Requirements)
 1. The system shall ask the current user if he/she is a new user, existing user, or guest.
-   1.1. The system shall provide means for an existing user to enter his/her user ID and password.
-   1.2. The system shall provide calculate every user’s carbon footprint.
+   1. The system shall provide means for an existing user to enter his/her user ID and password.
+   1. The system shall provide calculate every user’s carbon footprint.
       - wat
         - hi
 <ol>
