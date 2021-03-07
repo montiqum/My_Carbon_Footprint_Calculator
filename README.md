@@ -7,13 +7,21 @@ It is intended to bring awareness to household members on the effects of carbon 
 By changing our diet, recycling habits, and energy usage, everyone can effectively make a difference.
 
 ## Table of Contents
+
 [1. Description](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#my-carbon-footprint-calculator)
+
 [2. Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#wireframe-diagram)
+
 [3. Entity Relationship Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#entity-relationship-diagram)
+
 [4. Database Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#database-diagram)
+
 [5. SQL Database](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#initial-sql-database)
+
 [6. Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#requirements)
+
 [7. Testing](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#testing)
+
 
 ## Wireframe Diagram
 ![Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Wireframe%20Draft.JPG)
