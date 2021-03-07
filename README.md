@@ -10,9 +10,6 @@ By changing our diet, recycling habits, and energy usage, everyone can effective
 ![Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Wireframe%20Draft.JPG)
 
 
-## Requirements
-[Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/tree/main/Requirements)
-
 ## Entity Relationship Diagram 
 ![ERD](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Melanie%20Montique%20ERD1%20final%20cut.jpg)
 
@@ -22,3 +19,9 @@ By changing our diet, recycling habits, and energy usage, everyone can effective
 ## Initial SQL Database
 
 https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Footprint_Calculator.sql
+
+## Requirements
+[Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/tree/main/Requirements)
+
+## Testing
+[Test Table](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/TestTable.md)
