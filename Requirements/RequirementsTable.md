@@ -17,5 +17,7 @@
 |   | 2.2 |       | The system shall provide easy access to pages by means of page tabs.                                                     | Inspection    | 1.2.1 |
 |   | 2.3 |       | The system shall provide drop down selections for user input vs. the user typing answers.                                | Demonstration | 2.2.1 |  
 | 3 |     |       | The system shall be developed with C# language, SQL and ASP.NET.                                                         | Inspection    | 1.3.1 |
-|   | 3.1 |       | The system shall be hosted in Azure and GitHub.                                                                          | Inspection    | 1.3.2 |                          
+|   | 3.1 |       | The system shall be hosted in Azure and GitHub.                                                                          | Inspection    | 1.3.2 |   
+
+
 [Back To Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/tree/main/Requirements)
