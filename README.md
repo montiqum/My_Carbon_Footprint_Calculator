@@ -6,6 +6,15 @@ and keep them informed on ways to help reduce carbon emissions.
 It is intended to bring awareness to household members on the effects of carbon emissions on the atmosphere, and climate. 
 By changing our diet, recycling habits, and energy usage, everyone can effectively make a difference.
 
+## Table of Contents
+[1. Description]
+[2. Wireframe Diagram]
+[3. Entity Relationship Diagram]
+[4. Database Diagram]
+[5. SQL Database]
+[6. Requirements]
+[7. Testing]
+
 ## Wireframe Diagram
 ![Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Wireframe%20Draft.JPG)
 
