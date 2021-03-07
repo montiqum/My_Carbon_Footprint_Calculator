@@ -61,6 +61,7 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 ## Requirements Table
 | Requirement ID | 2nd Level ID | 3rd Level ID | Requirement Description | Test Method | Test ID |
+| ---------------| ------------ | ------------ | ----------------------- | ----------- | --------|
 | 1 |     |       | The system shall ask the current user if he/she is a new user, existing user, or guest.               |    |    |
 |   | 1.1 |       | The system shall provide means for an existing user to enter his/her user ID and password.            |    |    |
 |   |     | 1.1.1 | Given a user ID, the system shall verify the validity of the user ID and password.                    |    |    |
