@@ -60,6 +60,8 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 
 
 ## Requirements Table
+[Requirements Table](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Requirements/RequirementsTable.md)
+
 | Requirement ID | 2nd Level ID | 3rd Level ID | Requirement Description | Test Method | Test ID |
 | :-------------:| :----------: | :----------: | ----------------------- | ----------- | --------|
 | 1 |     |       | The system shall ask the current user if he/she is a new user, existing user, or guest.                                  |    |    |
@@ -75,7 +77,8 @@ User Stories, Use Cases, Use-Case Diagram, and Requirements
 | 2 |     |       | The system shall save the data provided by the user in the Calculator database.                                          |    |    |
 |   | 2.1 |       | Given data from a guest user the system shall store the data in the database marking the user Id value with an asterisk. |    |    |
 |   | 2.2 |       | The system shall provide easy access to pages by means of page tabs.                                                     |    |    |
-|   | 2.3 |       | The system shall provide drop down selections for user input vs. the user typing answers.                                |    |    |                       | 3 |     |       | The system shall be developed with C# language, SQL and ASP.NET.                                                         |    |    |
+|   | 2.3 |       | The system shall provide drop down selections for user input vs. the user typing answers.                                |    |    |  
+| 3 |     |       | The system shall be developed with C# language, SQL and ASP.NET.                                                         |    |    |
 |   | 3.1 |       | The system shall be hosted in Azure and GitHub.                                                                          |    |    |                       
 
 [Back to Main](https://github.com/montiqum/My_Carbon_Footprint_Calculator)
