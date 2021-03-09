@@ -43,7 +43,7 @@ https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Foot
 # Requirements Table
 | Requirement ID | 2nd Level ID | 3rd Level ID | Requirement Description | Test Method | Test ID |
 | :-------------:| :----------: | :----------: | ----------------------- | ----------- | :------:|
-| 1 |     |       | The system shall ask the current user if he/she is a new user, existing user, or guest.                                  | Inspection    | <a href=https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#t1> 1.1.1 </a> |
+| 1 |     |       | The system shall ask the current user if he/she is a new user, existing user, or guest.                                  | Inspection    | <a href=https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#t1> 1 </a> |
 |   | 1.1 |       | The system shall provide means for an existing user to enter his/her user ID and password.                               | Demonstration | 2.1.1 |
 |   |     | 1.1.1 | Given a user ID, the system shall verify the validity of the user ID and password.                                       | Test          | 3.1.1 |
 |   |     | 1.1.2 | Given authorization, the system shall allow the user access to the calculator.                                           | Demonstration | 2.1.2 |
@@ -68,7 +68,7 @@ https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Foot
 
 | Test ID | Requirement ID | Test Procedure | Current Status | Time Stamp | Build/Version |
 | :------:| :------------: | -------------- | -------------- | ---------- | --------------|
-| [1](#t1) | 1     | Verify that the system ask the current if he/she is a new user, existing user, or guest.                                                                                                            | Not Tested | NULL | N/A |
+| [1.1.1](#t1) | 1     | Verify that the system ask the current if he/she is a new user, existing user, or guest.                                                                                                            | Not Tested | NULL | N/A |
 | [1.2.1](#t2) | 2.2   | When the system is lauched, verify tabs are displayed at the top of the application.                                                                                                                | Not Tested | NULL | N/A |
 | [1.3.1](#t3) | 3     | Inspect the system build and verify it contains files and programs that include SQL, Visual Studio, and ASP.Net file types                                                                          | Not Tested | NULL | N/A |
 | [1.3.2](#t4) | 3.1   | Check Github or Azure to view the files of the program.                                                                                                                                             | Not Tested | NULL | N/A |
