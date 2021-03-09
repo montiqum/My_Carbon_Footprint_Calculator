@@ -47,10 +47,10 @@ https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Foot
 
 | Test ID | Requirement ID | Test Procedure | Current Status | Time Stamp | Build/Version |
 | :------:| :------------: | -------------- | -------------- | ---------- | --------------|
-| 1.1.1 | 1     | Verify that the system ask the current if he/she is a new user, existing user, or guest.                                                                                                            | Not Tested | NULL | N/A |
-| 1.2.1 | 2.2   | When the system is lauched, verify tabs are displayed at the top of the application.                                                                                                                | Not Tested | NULL | N/A |
-| 1.3.1 | 3     | Inspect the system build and verify it contains files and programs that include SQL, Visual Studio, and ASP.Net file types                                                                          | Not Tested | NULL | N/A |
-| 1.3.2 | 3.1   | Check Github or Azure to view the files of the program.                                                                                                                                             | Not Tested | NULL | N/A |
+| [1.1.1](#t1) | 1     | Verify that the system ask the current if he/she is a new user, existing user, or guest.                                                                                                            | Not Tested | NULL | N/A |
+| [1.2.1](#t2) | 2.2   | When the system is lauched, verify tabs are displayed at the top of the application.                                                                                                                | Not Tested | NULL | N/A |
+| [1.3.1](#t3) | 3     | Inspect the system build and verify it contains files and programs that include SQL, Visual Studio, and ASP.Net file types                                                                          | Not Tested | NULL | N/A |
+| [1.3.2](#t4) | 3.1   | Check Github or Azure to view the files of the program.                                                                                                                                             | Not Tested | NULL | N/A |
 | 2.1.1 | 1.1   | When the system runs and the current user selects existing user, verify the system displays textboxes for user id and password.                                                                     | Not Tested | NULL | N/A |
 | 2.1.2 | 1.1.2 | When the user verifies their credentials, ensure the system moves to the Calulator screen and displays the user tab and screen.                                                                     | Not Tested | NULL | N/A |
 | 2.1.3 | 1.1.4 | When the user access the HomePage the current user selects 'Use system as guest', then verify the user gains access to the user tab and page.                                                       | Not Tested | NULL | N/A |
