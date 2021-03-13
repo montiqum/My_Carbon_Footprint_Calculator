@@ -12,20 +12,25 @@ By changing our diet, recycling habits, and energy usage, everyone can effective
 
 [2. Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#wireframe-diagram)
 
-[3. Entity Relationship Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#entity-relationship-diagram)
+[3. Prototype](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#prototype)
 
-[4. Database Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#database-diagram)
+[4. Entity Relationship Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#entity-relationship-diagram)
 
-[5. SQL Database](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#initial-sql-database)
+[5. Database Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#database-diagram)
 
-[6. Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#requirements)
+[6. SQL Database](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#initial-sql-database)
 
-[7. Testing](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#testing)
+[7. Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#requirements)
+
+[8. Testing](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#testing)
 
 
 ## Wireframe Diagram
 ![Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Wireframe%20Draft.JPG)
 
+## Prototype
+[First Prototype](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Prototypes/Prototype_03122021/README.md)
+![Prototype Homepage](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Prototypes/Prototype_03122021/homepageproto.JPG)
 
 ## Entity Relationship Diagram 
 ![ERD](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Melanie%20Montique%20ERD1%20final%20cut.jpg)
