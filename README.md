@@ -42,10 +42,10 @@ By changing our diet, recycling habits, and energy usage, everyone can effective
 
 https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Footprint_Calculator.sql
 
-## Requirements
+# Requirements
 [Requirements](https://github.com/montiqum/My_Carbon_Footprint_Calculator/tree/main/Requirements)
 
-# Requirements Table
+## Requirements Table
 | Requirement ID | 2nd Level ID | 3rd Level ID | Requirement Description | Test Method | Test ID |
 | :-------------:| :----------: | :----------: | ----------------------- | ----------- | :------:|
 | 1 |     |       | The system shall ask the current user if he/she is a new user, existing user, or guest.                                  | Inspection    | 1.1.1 |
@@ -66,10 +66,10 @@ https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Foot
 | 3 |     |       | The system shall be developed with C# language, SQL and ASP.NET.                                                         | Inspection    | 1.3.1 |
 |   | 3.1 |       | The system shall be hosted in Azure and GitHub.                                                                          | Inspection    | 1.3.2 |   
 
-## Testing
+# Testing
 [Test Table](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/TestTable.md)
 
-# Test Table
+## Test Table
 
 | Test ID | Requirement ID | Test Procedure | Current Status | Time Stamp | Build/Version |
 | :------:| :------------: | -------------- | -------------- | ---------- | --------------|
