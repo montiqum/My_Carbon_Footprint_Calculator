@@ -10,7 +10,7 @@ By changing our diet, recycling habits, and energy usage, everyone can effective
 
 [1. Description](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#my-carbon-footprint-calculator)
 
-[2. Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#wireframe-diagram)
+[2. Wireframe Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Wireframes/Wireframe%20Draft.JPG)
 
 [3. Prototype](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/README.md#prototype)
 
