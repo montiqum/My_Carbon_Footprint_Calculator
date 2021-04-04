@@ -38,6 +38,9 @@ By changing our diet, recycling habits, and energy usage, everyone can effective
 ## Database Diagram
 ![Database Diagram](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Database%20Diagram.JPG)
 
+## Database Diagram using Code First Approach in Visual Studio
+![Database Diagram Code First](https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/My_CFP_Cal_CodeFirst.JPG)
+
 ## Initial SQL Database
 
 https://github.com/montiqum/My_Carbon_Footprint_Calculator/blob/main/Carbon_Footprint_Calculator.sql
