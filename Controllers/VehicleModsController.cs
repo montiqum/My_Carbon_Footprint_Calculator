@@ -54,7 +54,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VehicleId,NoOfVehicles,Year,Make,Model,Mileage,UserId")] VehicleMod vehicleMod)
+        public async Task<IActionResult> Create([Bind("VehicleId,NoOfVehicles,Year,Make,Model,Mileage")] VehicleMod vehicleMod)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VehicleId,NoOfVehicles,Year,Make,Model,Mileage,UserId")] VehicleMod vehicleMod)
+        public async Task<IActionResult> Edit(int id, [Bind("VehicleId,NoOfVehicles,Year,Make,Model,Mileage")] VehicleMod vehicleMod)
         {
             if (id != vehicleMod.VehicleId)
             {

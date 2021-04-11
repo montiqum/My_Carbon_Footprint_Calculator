@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyCarbonFootprintCalculator</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/homepage.css" />
+</head>
+<body>
+    <header class="main-header">
+        <h>My Carbon FootPrint Calculator</h>
+    </header>
+    <div class="boxed">
+        <h3>Welcome To My Carbon FootPrint Calculator</h3>
+        <p> </p>
+        <p> </p>
+        <p>
+            My Carbon FootPrint Calculator is a resource available to the
+            average everyday person to help them calculate their estimated
+            carbon footprint, and keep them informed on ways to help reduce
+            carbon emissions.
+        </p>
+    </div>
+    <main class="mainBody">
+
+        <div class="usertype">
+            <div class="t1">
+                <input type="radio" id="returning" name="user" value="1" style="height:20px; width:20px;">
+                <label for="returning">Returning User</label><br>
+            </div>
+            <div class="t2">
+                <input type="radio" id="newuser" name="user" value="2" style="height:20px; width:20px;">
+                <label for="newuser">New User</label><br>
+            </div>
+            <div class="t3">
+                <input type="radio" id="guest" name="user" value="3" style="height:20px; width:20px;">
+                <label for="guest">Guest</label>
+            </div>
+
+        </div>
+
+        <div class="log_in">
+            <input class="l1" type="text" placeholder="User ID" name="uID" required>
+            <input class="l2" type="password" placeholder="Password" name="psw" required>
+            <a asp-area="" asp-controller="UserPage" asp-action="General"><button class="myloginbut" type="submit">Get my estimated Footprint</button></a>
+            <form action="/action_page.php" method="get">
+            </form>
+        </div>
+        <div class="imagelogo">
+            <img class="logo" src="~/images/Logo.JPG" />
+        </div>
+
+        <div>
+            @RenderBody()
+        </div>
+        <footer>
+            <div class="container">
+                &copy; 2021 - My Carbon Footprint Calculator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

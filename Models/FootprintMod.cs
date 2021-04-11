@@ -19,7 +19,5 @@ namespace MyCarbonFootprintCalculator.Models
         public int Waste_emm { get; set; }
         [Required]
         public int Total_emm { get; set; }
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
     }
 }

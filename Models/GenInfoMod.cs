@@ -14,23 +14,17 @@ namespace MyCarbonFootprintCalculator.Models
         private string _pword;
         
         [Key]
-        public int UserId { get; set; }
-        [DataType(DataType.Password)]
-        [Required]
-        public string Pword { set => this._pword = value; }
+        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int UserId { get; set; }      
         [AllowNull]
-        [MaxLength(50, ErrorMessage = "More than 50 characters")]
+        //[MaxLength(50, ErrorMessage = "More than 50 characters")]
         public string City { get; set; }
         [Required]
         public string State { get; set; }
         [Required]
-        [MaxLength(5, ErrorMessage = "More than 5 digits")]
+        //[MaxLength(5, ErrorMessage = "More than 5 digits")]
         public int ZipCode { get; set; }
         [AllowNull]
-        public int AnnualIncome { get; set; }
-        [ForeignKey("CFPId")]
-        public int CFPId{ get; set; }
-
-      
+        public int AnnualIncome { get; set; } 
     }
 }

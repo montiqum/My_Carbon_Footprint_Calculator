@@ -45,7 +45,7 @@ namespace MyCarbonFootprintCalculator.Controllers
 
         // GET: HouseMods/Create
         public IActionResult Create()
-        {           
+        {
             return View();
         }
 
@@ -54,7 +54,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type,UserId")] HouseMod houseMod)
+        public async Task<IActionResult> Create([Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type")] HouseMod houseMod)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type,UserId")] HouseMod houseMod)
+        public async Task<IActionResult> Edit(int id, [Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type")] HouseMod houseMod)
         {
             if (id != houseMod.HouseId)
             {

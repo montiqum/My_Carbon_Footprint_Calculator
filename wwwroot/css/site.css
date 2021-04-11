@@ -25,6 +25,9 @@ a {
     grid-area: 1/1/2/2;
     text-align: center;
     padding-top: 30px;
+    font-family: 'Brush Script MT','Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 

@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyCarbonFootprintCalculator.Data;
 
 namespace MyCarbonFootprintCalculator.Migrations
 {
     [DbContext(typeof(MyCarbonFootprintCalculatorContext))]
-    partial class MyCarbonFootprintCalculatorContextModelSnapshot : ModelSnapshot
+    [Migration("20210411062712_Snd")]
+    partial class Snd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -93,13 +95,15 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("City")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ZipCode")
+                        .HasMaxLength(5)
                         .HasColumnType("int");
 
                     b.HasKey("UserId");

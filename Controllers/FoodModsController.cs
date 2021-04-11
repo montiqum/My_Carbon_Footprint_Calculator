@@ -54,7 +54,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("DietId,DietType,UserId")] FoodMod foodMod)
+        public async Task<IActionResult> Create([Bind("DietId,DietType,Grains,Meat,Vegetables,Fruits,Fish,Milk,Desserts,Fast_foods")] FoodMod foodMod)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("DietId,DietType,UserId")] FoodMod foodMod)
+        public async Task<IActionResult> Edit(int id, [Bind("DietId,DietType,Grains,Meat,Vegetables,Fruits,Fish,Milk,Desserts,Fast_foods")] FoodMod foodMod)
         {
             if (id != foodMod.DietId)
             {

@@ -2,30 +2,10 @@
 
 namespace MyCarbonFootprintCalculator.Migrations
 {
-    public partial class ScndMigr : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<string>(
-                name: "State",
-                table: "GenInfo",
-                type: "nvarchar(max)",
-                nullable: false,
-                defaultValue: "",
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)",
-                oldNullable: true);
-
-            migrationBuilder.AlterColumn<string>(
-                name: "City",
-                table: "GenInfo",
-                type: "nvarchar(50)",
-                maxLength: 50,
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)",
-                oldNullable: true);
-
             migrationBuilder.CreateTable(
                 name: "Food",
                 columns: table => new
@@ -33,7 +13,14 @@ namespace MyCarbonFootprintCalculator.Migrations
                     DietId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DietType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Grains = table.Column<int>(type: "int", nullable: false),
+                    Meat = table.Column<int>(type: "int", nullable: false),
+                    Vegetables = table.Column<int>(type: "int", nullable: false),
+                    Fruits = table.Column<int>(type: "int", nullable: false),
+                    Fish = table.Column<int>(type: "int", nullable: false),
+                    Milk = table.Column<int>(type: "int", nullable: false),
+                    Desserts = table.Column<int>(type: "int", nullable: false),
+                    Fast_foods = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -46,11 +33,30 @@ namespace MyCarbonFootprintCalculator.Migrations
                 {
                     CFPId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Travel_emm = table.Column<int>(type: "int", nullable: false),
+                    HH_Emm = table.Column<int>(type: "int", nullable: false),
+                    Waste_emm = table.Column<int>(type: "int", nullable: false),
+                    Total_emm = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Footprint", x => x.CFPId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "GenInfo",
+                columns: table => new
+                {
+                    UserId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    City = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    State = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ZipCode = table.Column<int>(type: "int", maxLength: 5, nullable: false),
+                    AnnualIncome = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_GenInfo", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,8 +68,7 @@ namespace MyCarbonFootprintCalculator.Migrations
                     Size = table.Column<int>(type: "int", nullable: false),
                     Sqft = table.Column<int>(type: "int", nullable: false),
                     Energy_Usage = table.Column<int>(type: "int", nullable: false),
-                    Energy_Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Energy_Type = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -80,8 +85,7 @@ namespace MyCarbonFootprintCalculator.Migrations
                     Year = table.Column<int>(type: "int", nullable: false),
                     Make = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Model = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Mileage = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Mileage = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -98,28 +102,13 @@ namespace MyCarbonFootprintCalculator.Migrations
                 name: "Footprint");
 
             migrationBuilder.DropTable(
+                name: "GenInfo");
+
+            migrationBuilder.DropTable(
                 name: "House");
 
             migrationBuilder.DropTable(
                 name: "Vehicle");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "State",
-                table: "GenInfo",
-                type: "nvarchar(max)",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
-
-            migrationBuilder.AlterColumn<string>(
-                name: "City",
-                table: "GenInfo",
-                type: "nvarchar(max)",
-                nullable: true,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(50)",
-                oldMaxLength: 50,
-                oldNullable: true);
         }
     }
 }

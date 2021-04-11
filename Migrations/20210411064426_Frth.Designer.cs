@@ -9,8 +9,8 @@ using MyCarbonFootprintCalculator.Data;
 namespace MyCarbonFootprintCalculator.Migrations
 {
     [DbContext(typeof(MyCarbonFootprintCalculatorContext))]
-    [Migration("20210403213807_ScndMigr")]
-    partial class ScndMigr
+    [Migration("20210411064426_Frth")]
+    partial class Frth
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,11 +27,32 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("Desserts")
+                        .HasColumnType("int");
+
                     b.Property<string>("DietType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("Fast_foods")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Fish")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Fruits")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Grains")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Meat")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Milk")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Vegetables")
                         .HasColumnType("int");
 
                     b.HasKey("DietId");
@@ -46,7 +67,16 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("UserId")
+                    b.Property<int>("HH_Emm")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Total_emm")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Travel_emm")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Waste_emm")
                         .HasColumnType("int");
 
                     b.HasKey("CFPId");
@@ -64,19 +94,14 @@ namespace MyCarbonFootprintCalculator.Migrations
                     b.Property<int>("AnnualIncome")
                         .HasColumnType("int");
 
-                    b.Property<int>("CFPId")
-                        .HasColumnType("int");
-
                     b.Property<string>("City")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ZipCode")
-                        .HasMaxLength(5)
                         .HasColumnType("int");
 
                     b.HasKey("UserId");
@@ -104,9 +129,6 @@ namespace MyCarbonFootprintCalculator.Migrations
                     b.Property<int>("Sqft")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("HouseId");
 
                     b.ToTable("House");
@@ -129,9 +151,6 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NoOfVehicles")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.Property<int>("Year")

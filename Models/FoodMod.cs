@@ -13,7 +13,13 @@ namespace MyCarbonFootprintCalculator.Models
         public int DietId { get; set; }
         [Required]
         public string DietType { get; set; }
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
+        public int Grains { get; set; }
+        public int Meat { get; set; }
+        public int Vegetables { get; set; }
+        public int Fruits { get; set; }
+        public int Fish { get; set; }
+        public int Milk { get; set; }
+        public int Desserts { get; set; }
+        public int Fast_foods { get; set; }
     }
 }

@@ -19,7 +19,5 @@ namespace MyCarbonFootprintCalculator.Models
         public int Energy_Usage { get; set; }
         [Required]
         public string Energy_Type { get; set; }
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
     }
 }

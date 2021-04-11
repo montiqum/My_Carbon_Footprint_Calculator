@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h3>Food</h3>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,10 +13,34 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.DietType)
+                Diet ID
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.UserId)
+                Diet Type
+            </th>
+            <th>
+                Grains(%)
+            </th>
+            <th>
+                Meat(%)
+            </th>
+            <th>
+                Vegetables(%)
+            </th>
+            <th>
+                Fruits(%)
+            </th>
+            <th>
+                Fish(%)
+            </th>
+            <th>
+                Milk(%)
+            </th>
+            <th>
+                Desserts(%)
+            </th>
+            <th>
+                Fast foods(%)
             </th>
             <th></th>
         </tr>
@@ -25,10 +49,34 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.DietId)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.DietType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.UserId)
+                @Html.DisplayFor(modelItem => item.Grains)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vegetables)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fruits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Milk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desserts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fast_foods)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.DietId">Edit</a> |

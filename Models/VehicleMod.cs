@@ -18,7 +18,5 @@ namespace MyCarbonFootprintCalculator.Models
         public string Model { get; set; }
         [Required]
         public int Mileage { get; set; }
-        [ForeignKey("UserId")]
-        public int UserId { get; set; }
     }
 }
