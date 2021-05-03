@@ -9,7 +9,7 @@ using MyCarbonFootprintCalculator.Data;
 namespace MyCarbonFootprintCalculator.Migrations
 {
     [DbContext(typeof(MyCarbonFootprintCalculatorContext))]
-    [Migration("20210411032608_Initial")]
+    [Migration("20210426160420_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -95,15 +95,13 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("City")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("ZipCode")
-                        .HasMaxLength(5)
                         .HasColumnType("int");
 
                     b.HasKey("UserId");
@@ -118,15 +116,23 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Electric")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Energy_Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Energy_Usage")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Gas")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Size")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Solar")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Sqft")
                         .HasColumnType("int");

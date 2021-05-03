@@ -24,6 +24,15 @@
             <th>
                 @Html.DisplayNameFor(model => model.Energy_Type)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Solar)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Electric)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -41,6 +50,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Energy_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Solar)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Electric)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.HouseId">Edit</a> |

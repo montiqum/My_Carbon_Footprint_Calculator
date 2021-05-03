@@ -114,15 +114,23 @@ namespace MyCarbonFootprintCalculator.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<bool>("Electric")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Energy_Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Energy_Usage")
                         .HasColumnType("int");
 
+                    b.Property<bool>("Gas")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Size")
                         .HasColumnType("int");
+
+                    b.Property<bool>("Solar")
+                        .HasColumnType("bit");
 
                     b.Property<int>("Sqft")
                         .HasColumnType("int");

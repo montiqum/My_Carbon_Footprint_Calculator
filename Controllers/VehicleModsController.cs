@@ -60,7 +60,7 @@ namespace MyCarbonFootprintCalculator.Controllers
             {
                 _context.Add(vehicleMod);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "FoodMods");
             }
             return View(vehicleMod);
         }

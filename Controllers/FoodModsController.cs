@@ -56,12 +56,15 @@ namespace MyCarbonFootprintCalculator.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("DietId,DietType,Grains,Meat,Vegetables,Fruits,Fish,Milk,Desserts,Fast_foods")] FoodMod foodMod)
         {
-            if (ModelState.IsValid)
+            var total = foodMod.Grains + foodMod.Meat + foodMod.Vegetables + foodMod.Fruits + foodMod.Fish + foodMod.Milk + foodMod.Desserts + foodMod.Fast_foods;
+
+            if (ModelState.IsValid && total == 100)
             {
                 _context.Add(foodMod);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "FootprintMods");
             }
+            ViewBag.errormessage = "Total percentages not equal to 100%";
             return View(foodMod);
         }
 
@@ -88,12 +91,13 @@ namespace MyCarbonFootprintCalculator.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("DietId,DietType,Grains,Meat,Vegetables,Fruits,Fish,Milk,Desserts,Fast_foods")] FoodMod foodMod)
         {
+            var total = foodMod.Grains + foodMod.Meat + foodMod.Vegetables + foodMod.Fruits + foodMod.Fish + foodMod.Milk + foodMod.Desserts + foodMod.Fast_foods;
             if (id != foodMod.DietId)
             {
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && total == 100)
             {
                 try
                 {
@@ -113,6 +117,7 @@ namespace MyCarbonFootprintCalculator.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.errormessage = "Total percentages not equal to 100%";
             return View(foodMod);
         }
 

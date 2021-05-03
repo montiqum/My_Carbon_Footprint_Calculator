@@ -29,6 +29,11 @@ a {
     font-size: 50px;
     font-weight: bold;
 }
+.navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
 
 
 .btn-primary {

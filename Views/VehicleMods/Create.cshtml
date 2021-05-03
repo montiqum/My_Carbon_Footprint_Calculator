@@ -4,48 +4,61 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>VehicleMod</h4>
+<h4>Vehicle Data Page</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="NoOfVehicles" class="control-label"></label>
-                <input asp-for="NoOfVehicles" class="form-control" />
-                <span asp-validation-for="NoOfVehicles" class="text-danger"></span>
+                <label asp-for="NoOfVehicles" class="control-label"> Number of Vehicles</label>
+                <select class="form-control" asp-for="NoOfVehicles">
+                    <option value="null"> Number of Vehicles</option>
+                    <option value="1"> 1 vehicle </option>
+                        @for (int i = 2; i <= 4; i++)
+                        {
+                            <option value="@i"> @i vehicles </option>
+                        }
+                        <option value="5"> 5+ vehicles </option>
+                    </select>
+                    <span asp-validation-for="NoOfVehicles" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Year" class="control-label"></label>
-                <input asp-for="Year" class="form-control" />
+                <select class="form-control" asp-for="Year">                
+                    <option value="null"> Enter the year of your most used vehicle </option>
+                    <option value="2000"> 2000 or older </option>                     
+                    @for (int i = 2001; i <= 2022; i++)
+                    {
+                        <option value="@i"> @i </option>
+                    }                   
+                </select>
                 <span asp-validation-for="Year" class="text-danger"></span>
-            </div>
+            </div>          
             <div class="form-group">
                 <label asp-for="Make" class="control-label"></label>
-                <input asp-for="Make" class="form-control" />
+                <input asp-for="Make" class="form-control" placeholder="Input the make of your most used vehicle" />
                 <span asp-validation-for="Make" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Model" class="control-label"></label>
-                <input asp-for="Model" class="form-control" />
+                <input asp-for="Model" class="form-control" placeholder="Input the model of your most used vehicle"/>
                 <span asp-validation-for="Model" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Mileage" class="control-label"></label>
-                <input asp-for="Mileage" class="form-control" />
+                <input asp-for="Mileage" class="form-control" placeholder="Total average yearly mileage of all vehicles" min="1"/>
                 <span asp-validation-for="Mileage" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Next >" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @*<a asp-action="Index">Back to List</a>*@
 </div>
 
 @section Scripts {

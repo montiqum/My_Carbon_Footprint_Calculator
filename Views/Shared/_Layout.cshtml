@@ -6,6 +6,7 @@
     <title>@ViewData["Title"] - MyCarbonFootprintCalculator</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    @RenderSection("link1", false)
 </head>
 <body>
     <header class="main-header">
@@ -23,16 +24,16 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserPage" asp-action="General">USER</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="GenInfoMods" asp-action="Create">USER</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserPage" asp-action="House">HOUSE</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="HouseMods" asp-action="Create">HOUSE</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserPage" asp-action="Vehicles">VEHICLES</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="VehicleMods" asp-action="Create">VEHICLES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="UserPage" asp-action="Food">FOOD</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="FoodMods" asp-action="Create">FOOD</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="UserPage" asp-action="Footprint">FOOTPRINT</a>

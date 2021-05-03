@@ -22,6 +22,11 @@ namespace MyCarbonFootprintCalculator.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public IActionResult Index(GenInfoMod gen)
+        {
+            return RedirectToAction("Create", "GenInfoMods");
+        }
 
         public IActionResult Privacy()
         {

@@ -22,6 +22,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // GET: GenInfoMods
         public async Task<IActionResult> Index()
         {
+            //var newUser = new GenInfoMod();
             return View(await _context.GenInfo.ToListAsync());
         }
 
@@ -46,6 +47,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // GET: GenInfoMods/Create
         public IActionResult Create()
         {
+            ViewBag.message = "1";
             return View();
         }
 
@@ -59,13 +61,14 @@ namespace MyCarbonFootprintCalculator.Controllers
             if (ModelState.IsValid)
             {
                 _context.Add(genInfoMod);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                await _context.SaveChangesAsync();          
+                return RedirectToAction("Create", "HouseMods");
             }
             return View(genInfoMod);
         }
 
         // GET: GenInfoMods/Edit/5
+        //[Route("GenInfoMods/Admin/Edit/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -148,6 +151,11 @@ namespace MyCarbonFootprintCalculator.Controllers
         private bool GenInfoModExists(int id)
         {
             return _context.GenInfo.Any(e => e.UserId == id);
+        }
+        public IActionResult Next()
+        {
+            var userPage = _context.House;
+            return View(userPage);
         }
     }
 }

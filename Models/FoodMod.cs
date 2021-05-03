@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Web.Mvc.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -21,5 +22,6 @@ namespace MyCarbonFootprintCalculator.Models
         public int Milk { get; set; }
         public int Desserts { get; set; }
         public int Fast_foods { get; set; }
+
     }
 }

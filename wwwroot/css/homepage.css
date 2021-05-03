@@ -51,6 +51,12 @@ body {
 .t3 {
     margin-top: 20px;
 }
+.thelogin {
+    grid-area: 1/1/2/3 !important;
+    display: flex;
+    flex-direction: row;
+    /*max-width: 100%*/
+}
 .log_in {
     grid-area: 1/2/2/3;
     display: flex;
@@ -70,7 +76,7 @@ body {
     background-color: Highlight;
 }
 .imagelogo {
-    grid-area: 1/3/2/4;
+    grid-area: 1/1/2/4;
     padding-top: 50px;
 }
 .logo

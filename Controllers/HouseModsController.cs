@@ -44,28 +44,27 @@ namespace MyCarbonFootprintCalculator.Controllers
         }
 
         // GET: HouseMods/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
+        public IActionResult Create()=> View("Create", new HouseMod() { } );       
 
         // POST: HouseMods/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type")] HouseMod houseMod)
+        public async Task<IActionResult> Create([Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type,Solar,Gas,Electric")] HouseMod houseMod)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(houseMod);
+                houseMod.Energy_Type = GetEnergyType(houseMod.Solar, houseMod.Gas, houseMod.Electric);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "VehicleMods");
             }
             return View(houseMod);
         }
 
         // GET: HouseMods/Edit/5
+        //[Route("HouseMods/Admin/Edit/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -86,7 +85,7 @@ namespace MyCarbonFootprintCalculator.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type")] HouseMod houseMod)
+        public async Task<IActionResult> Edit(int id, [Bind("HouseId,Size,Sqft,Energy_Usage,Energy_Type,Solar,Gas,Electric")] HouseMod houseMod)
         {
             if (id != houseMod.HouseId)
             {
@@ -98,6 +97,7 @@ namespace MyCarbonFootprintCalculator.Controllers
                 try
                 {
                     _context.Update(houseMod);
+                    houseMod.Energy_Type = GetEnergyType(houseMod.Solar, houseMod.Gas, houseMod.Electric); houseMod.Energy_Type = GetEnergyType(houseMod.Solar, houseMod.Gas, houseMod.Electric);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -148,6 +148,44 @@ namespace MyCarbonFootprintCalculator.Controllers
         private bool HouseModExists(int id)
         {
             return _context.House.Any(e => e.HouseId == id);
+        }
+        public string GetEnergyType(bool Solar, bool Gas, bool Electric)
+        {
+            var Energy_Type = "";
+            if (Solar && !Gas && !Electric)
+            {
+                Energy_Type = "Solar";
+            }
+            else if (!Solar && Gas && !Electric)
+            {
+                Energy_Type = "Gas";
+            }
+            else if (!Solar && !Gas && Electric)
+            {
+                Energy_Type = "Electric";
+            }
+            else if (Solar && Gas && !Electric)
+            {
+                Energy_Type = "Solar and Gas";
+            }
+            else if (Solar && !Gas && Electric)
+            {
+                Energy_Type = "Solar and Electric";
+            }
+            else if (!Solar && Gas && Electric)
+            {
+                Energy_Type = "Gas and Electric";
+            }
+            else if (Solar && Gas && Electric)
+            {
+                Energy_Type = "Solar, Gas, and Electric";
+            }
+            else if (!Solar && !Gas && !Electric)
+            {
+                Energy_Type = "No value";
+            }
+
+            return Energy_Type;
         }
     }
 }

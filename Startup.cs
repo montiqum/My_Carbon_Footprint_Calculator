@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MyCarbonFootprintCalculator.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MyCarbonFootprintCalculator
 {
@@ -26,12 +27,17 @@ namespace MyCarbonFootprintCalculator
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddRazorPages();
             services.AddDbContext<MyCarbonFootprintCalculatorContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyCarbonFootprintCalculatorContext")));
             services.AddScoped<IGenInfoRepo, EFGenInfoRepo>();
             services.AddScoped<IHouseRepo, EFHouseRepo>();
             services.AddScoped<IVehicleRepo, EFVehicleRepo>();           
             services.AddScoped<IFoodRepo, EFFoodRepo>();
             services.AddScoped<IFootprintRepo, EFFootprintRepo>();
+            services.AddAuthorization(opt =>
+            {
+                opt.FallbackPolicy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +58,7 @@ namespace MyCarbonFootprintCalculator
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -59,6 +66,7 @@ namespace MyCarbonFootprintCalculator
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

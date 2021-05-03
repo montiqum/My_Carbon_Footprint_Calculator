@@ -49,9 +49,9 @@ namespace MyCarbonFootprintCalculator.Migrations
                 {
                     UserId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    City = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
+                    City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     State = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ZipCode = table.Column<int>(type: "int", maxLength: 5, nullable: false),
+                    ZipCode = table.Column<int>(type: "int", nullable: false),
                     AnnualIncome = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -68,7 +68,10 @@ namespace MyCarbonFootprintCalculator.Migrations
                     Size = table.Column<int>(type: "int", nullable: false),
                     Sqft = table.Column<int>(type: "int", nullable: false),
                     Energy_Usage = table.Column<int>(type: "int", nullable: false),
-                    Energy_Type = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Energy_Type = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Solar = table.Column<bool>(type: "bit", nullable: false),
+                    Gas = table.Column<bool>(type: "bit", nullable: false),
+                    Electric = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

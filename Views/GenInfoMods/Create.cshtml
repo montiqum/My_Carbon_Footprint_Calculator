@@ -1,15 +1,41 @@
-﻿@model MyCarbonFootprintCalculator.Models.GenInfoMod
+﻿@using Microsoft.AspNetCore.Identity
+@using MyCarbonFootprintCalculator.Areas.Identity.Data
+
+@inject SignInManager<MyCarbonFootprintCalculatorUser> SignInManager
+@inject UserManager<MyCarbonFootprintCalculatorUser> UserManager
+@model MyCarbonFootprintCalculator.Models.GenInfoMod
 
 @{
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>GenInfoMod</h4>
+<h4>User General Info</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row temp">
+    <div>
+        <input class="useridholder" type="text" placeholder="@ViewBag.message" style="width:100px; height:30px;" />
+    </div>
+    @*<div class="namechanger">
+            <input type="text" placeholder="Your Name" style="width:250px; height:30px;" />
+            <form method="post">
+                <button class="myloginbut" type="submit" style="margin-top:5px;">Update</button>
+            </form>
+        </div>*@
+    <svg class="didyouknow" @*width="600" height="450"*@>
+        <rect x="50" y="20" rx="20" ry="20" width="350" height="350"
+              style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+    </svg>
+    <div class="displayusersname">
+        <h1 style="font-family:'Brush Script MT'; color:darkviolet"> Welcome @UserManager.GetUserName(User)! @*<input type="text" id="myUser" value="" name="usrnm" placeholder="Your Name" style="background-color:transparent; color:darkviolet; border:hidden; padding-left: 10px;">*@</h1>
+        @*<button onclick="display()" style="margin-left: 150px;">Update</button>*@
+        <script>
+            function display() {
+                var x = document.getElementById("myUser").inputMode;
+                /*alert("The name of the text field is: " + x);*/
+            }
+        </script>
+    </div>
+    <div class="col-md-4 geninfodata">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -28,19 +54,26 @@
                 <span asp-validation-for="ZipCode" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="AnnualIncome" class="control-label"></label>
-                <input asp-for="AnnualIncome" class="form-control" />
+                <label asp-for="AnnualIncome" class="control-label">Annual Income ($)</label>
+                <select class="form-control" asp-for="AnnualIncome">
+                    <option value="null"> Select annual income range </option>
+                    <option value="15000"> $0 - $25K </option>
+                    <option value="40000"> $25K - $50K </option>
+                    <option value="65000"> $50K - $75K </option>
+                    <option value="90000"> $75K - $100K </option>
+                    <option value="110000"> $100K+ </option>
+                </select>
                 <span asp-validation-for="AnnualIncome" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Next >" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    @*<a asp-action="Index">Back to List</a>*@ @*don't want users to have access*@
 </div>
 
 @section Scripts {
