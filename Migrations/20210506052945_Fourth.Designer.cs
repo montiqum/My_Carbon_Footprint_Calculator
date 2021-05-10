@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyCarbonFootprintCalculator.Data;
 
 namespace MyCarbonFootprintCalculator.Migrations
 {
     [DbContext(typeof(MyCarbonFootprintCalculatorContext))]
-    partial class MyCarbonFootprintCalculatorContextModelSnapshot : ModelSnapshot
+    [Migration("20210506052945_Fourth")]
+    partial class Fourth
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

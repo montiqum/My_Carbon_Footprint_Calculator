@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,6 +15,7 @@ namespace MyCarbonFootprintCalculator.Controllers
     public class GenInfoModsController : Controller
     {
         private readonly MyCarbonFootprintCalculatorContext _context;
+        Location getlocation = new Location();
 
         public GenInfoModsController(MyCarbonFootprintCalculatorContext context)
         {
@@ -22,7 +25,6 @@ namespace MyCarbonFootprintCalculator.Controllers
         // GET: GenInfoMods
         public async Task<IActionResult> Index()
         {
-            //var newUser = new GenInfoMod();
             return View(await _context.GenInfo.ToListAsync());
         }
 
@@ -47,7 +49,8 @@ namespace MyCarbonFootprintCalculator.Controllers
         // GET: GenInfoMods/Create
         public IActionResult Create()
         {
-            ViewBag.message = "1";
+            var getID = new GenInfoMod();
+            ViewBag.message = getID.UserId;            
             return View();
         }
 
@@ -58,17 +61,21 @@ namespace MyCarbonFootprintCalculator.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("UserId,City,State,ZipCode,AnnualIncome")] GenInfoMod genInfoMod)
         {
+            getlocation = await Location.Lookup(genInfoMod.ZipCode);
+
+            genInfoMod.City = getlocation.City;
+            genInfoMod.State = getlocation.State;
+            genInfoMod.ZipCode = getlocation.Zip;
             if (ModelState.IsValid)
             {
                 _context.Add(genInfoMod);
-                await _context.SaveChangesAsync();          
+                await _context.SaveChangesAsync();
                 return RedirectToAction("Create", "HouseMods");
             }
             return View(genInfoMod);
         }
 
         // GET: GenInfoMods/Edit/5
-        //[Route("GenInfoMods/Admin/Edit/{id}")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -151,11 +158,6 @@ namespace MyCarbonFootprintCalculator.Controllers
         private bool GenInfoModExists(int id)
         {
             return _context.GenInfo.Any(e => e.UserId == id);
-        }
-        public IActionResult Next()
-        {
-            var userPage = _context.House;
-            return View(userPage);
         }
     }
 }

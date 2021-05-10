@@ -109,6 +109,9 @@ body {
 .displayusersname{
     grid-area: 1/2/2/5
 }
+form .zip-wrap {
+    display: block !important;
+}
 /*.col-md-4 {
     padding-left: 25px;
 }*/
