@@ -9,17 +9,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyCarbonFootprintCalculator.Data;
 using MyCarbonFootprintCalculator.Models;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace MyCarbonFootprintCalculator.Controllers
 {
     public class GenInfoModsController : Controller
     {
         private readonly MyCarbonFootprintCalculatorContext _context;
+        private readonly AuthDbContext _users;
         Location getlocation = new Location();
 
-        public GenInfoModsController(MyCarbonFootprintCalculatorContext context)
+        public GenInfoModsController(MyCarbonFootprintCalculatorContext context, AuthDbContext user)
         {
             _context = context;
+            _users = user;
         }
 
         // GET: GenInfoMods
@@ -50,7 +54,8 @@ namespace MyCarbonFootprintCalculator.Controllers
         public IActionResult Create()
         {
             var getID = new GenInfoMod();
-            ViewBag.message = getID.UserId;            
+            ViewBag.message = getID.UserId;
+            ViewBag.currentUser = User.FindFirstValue(ClaimTypes.Name);
             return View();
         }
 

@@ -8,9 +8,8 @@ body {
     background-size: cover;
 }
 .main-header {
-    grid-area: 1/1/2/6;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 10px !important;
     font-family: 'Brush Script MT','Times New Roman', Times, serif;
     font-size: 50px;
     font-weight: bold;
