@@ -1,0 +1,56 @@
+﻿@model MyCarbonFootprintCalculator.Models.FootprintMod
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>FootprintMod</h4>
+    <hr />
+    <dl class="row">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <dt class="col-sm-2">
+                Carbon Footprint Id
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CFPId)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Travel_emm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Travel_emm)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HH_Emm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HH_Emm)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Waste_emm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Waste_emm)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Total_emm)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Total_emm)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CFPId">Edit</a> |
+    <p class="admin-index" style="margin-top: 20px;">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+        }
+    </p>
+</div>

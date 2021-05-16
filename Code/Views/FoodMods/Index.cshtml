@@ -1,0 +1,89 @@
+﻿@model IEnumerable<MyCarbonFootprintCalculator.Models.FoodMod>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Food</h3>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Diet ID
+            </th>
+            <th>
+                Diet Type
+            </th>
+            <th>
+                Grains(%)
+            </th>
+            <th>
+                Meat(%)
+            </th>
+            <th>
+                Vegetables(%)
+            </th>
+            <th>
+                Fruits(%)
+            </th>
+            <th>
+                Fish(%)
+            </th>
+            <th>
+                Milk(%)
+            </th>
+            <th>
+                Desserts(%)
+            </th>
+            <th>
+                Fast foods(%)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DietId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DietType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grains)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Meat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vegetables)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fruits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Milk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Desserts)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fast_foods)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DietId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DietId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DietId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

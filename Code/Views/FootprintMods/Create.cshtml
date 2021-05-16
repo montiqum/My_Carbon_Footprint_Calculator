@@ -1,0 +1,52 @@
+﻿@model MyCarbonFootprintCalculator.Models.FootprintMod
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4> Your Footprint</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Travel_emm" class="control-label"></label>
+                <input asp-for="Travel_emm" class="form-control" />
+                <span asp-validation-for="Travel_emm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HH_Emm" class="control-label"></label>
+                <input asp-for="HH_Emm" class="form-control" />
+                <span asp-validation-for="HH_Emm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Waste_emm" class="control-label"></label>
+                <input asp-for="Waste_emm" class="form-control" />
+                <span asp-validation-for="Waste_emm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Total_emm" class="control-label"></label>
+                <input asp-for="Total_emm" class="form-control" />
+                <span asp-validation-for="Total_emm" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+            <div>
+                @if (ViewBag.CurrentUserId == 1)
+                {
+                    <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

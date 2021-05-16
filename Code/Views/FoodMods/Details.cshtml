@@ -1,0 +1,87 @@
+﻿@model MyCarbonFootprintCalculator.Models.FoodMod
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Details</h4>
+
+<div>
+    <h4>Diet Data</h4>
+    <hr />
+    <dl class="row">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DietId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DietId)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DietType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DietType)
+        </dd>
+        <dt class="col-sm-2">
+            Grains %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Grains)
+        </dd>
+        <dt class="col-sm-2">
+            Meat %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Meat)
+        </dd>
+        <dt class="col-sm-2">
+            Vegetables %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vegetables)
+        </dd>
+        <dt class="col-sm-2">
+            Fruits %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fruits)
+        </dd>
+        <dt class="col-sm-2">
+            Fish %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fish)
+        </dd>
+        <dt class="col-sm-2">
+            Milk %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Milk)
+        </dd>
+        <dt class="col-sm-2">
+            Desserts %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Desserts)
+        </dd>
+        <dt class="col-sm-2">
+            Fast food %
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fast_foods)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DietId">Edit</a> |
+    <a asp-controller="UserPage" asp-action="Footprint">Get Carbon Footprint</a>
+    <p class="admin-index" style="margin-top: 20px;">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+        }
+    </p>
+</div>

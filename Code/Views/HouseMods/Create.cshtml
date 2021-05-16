@@ -1,0 +1,94 @@
+﻿@model MyCarbonFootprintCalculator.Models.HouseMod
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+@section link1{
+    <link rel="stylesheet" href="~/css/housepage.css" />
+}
+
+<h4>House Information Page</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Size" class="control-label">Household Size</label>
+                <select class="form-control" asp-for="Size">
+                    <option value="null"> Number of people in your household</option>
+                    <option value="1"> 1 person </option>
+                    @for (int i = 2; i <= 10; i++)
+                    {
+                        <option value="@i"> @i people </option>
+                    }
+                    <option value="12"> 11+ people </option>
+                </select>
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sqft" class="control-label">House Square Footage</label>
+                <select class="form-control" asp-for="Sqft">
+                    <option value="null"> Select house square footage </option>
+                    <option value="1000"> 0 - 1500 sqft </option>
+                    <option value="2000"> 1501 - 2500 sqft </option>
+                    <option value="3000"> 2501 - 3500 sqft</option>
+                    <option value="4000"> 3501 - 4500 sqft </option>
+                    <option value="5000"> 4501 - 5500 sqft </option>
+                    <option value="6000"> 5500 sqft + </option>
+                </select>
+                <span asp-validation-for="Sqft" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Energy_Usage" class="control-label">Energy Usage (KWh)</label>
+                <select class="form-control" asp-for="Energy_Usage">
+                    <option value="null"> Average $ amount of electricity + gas bill </option>
+                    <option value="25"> $0 - $50 </option>
+                    <option value="75"> $51 - $100 </option>
+                    <option value="125"> $101 - $150 </option>
+                    <option value="175"> $151 - $200 </option>
+                    <option value="225"> $201 - $250 </option>
+                    <option value="275"> $251 - $300 </option>
+                    <option value="325"> $301 - $350 </option>
+                    <option value="375"> $351 - $400 </option>
+                    <option value="450"> $401+ </option>
+                </select>
+                <span asp-validation-for="Energy_Usage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Energy_Type" class="control-label">Energy Type: </label>
+                @*<input asp-for="Energy_Type" class="form-control" />
+            <span asp-validation-for="Energy_Type" class="text-danger"></span>*@
+            </div>
+            <div class="form-group checkboxenergy">
+                <div class="s1">
+                    <input class="form-check-input" style="height:20px; width:20px;" asp-for="Solar" />
+                    <label class="form-check-label" style="margin-left:10px;"> @Html.DisplayNameFor(model => model.Solar)</label>
+                </div>
+                <div class="s2">
+                    <input class="form-check-input" style="height:20px; width:20px;" asp-for="Gas" />
+                    <label class="form-check-label" style="margin-left:10px;"> @Html.DisplayNameFor(model => model.Gas)</label>
+                </div>
+                <div class="s3">
+                    <input class="form-check-input" style="height:20px; width:20px;" asp-for="Electric" />
+                    <label class="form-check-label" style="margin-left:10px;"> @Html.DisplayNameFor(model => model.Electric)</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Next >" class="btn btn-primary" style="margin-top:10px;" />
+            </div>
+            <div>
+                @if (ViewBag.CurrentUserId == 1)
+                {
+                    <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

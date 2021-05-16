@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Identity
+@{
+    ViewData["Title"] = "Footprint";
+}
+
+@{
+    Layout = "_mysharedLayout";
+}
+
+
+<div class="maininfo">
+    <div class="congrats font-effect-fire font-effect-fire-animation">
+        <p>Congratulations @ViewBag.currentUserName ! </p>
+    </div>
+    <div class="fptwords font-effect-shadow-multiple">
+        <p>Your carbon footprint is @ViewBag.Test Tons.</p>
+        <p>Your household falls in the average range of 50 - 60 % for US homes.</p>
+        <p>Your household falls in the low - upper range of 60 - 70 % for CA homes.</p>
+    </div>
+    <div class="didyouknow">
+
+    </div>
+    <div class="graphresults">
+        <img class="co2map" src="~/images/CEbyState2017.JPG" />
+    </div>
+</div>
+
+

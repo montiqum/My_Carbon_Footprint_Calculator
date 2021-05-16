@@ -1,0 +1,30 @@
+﻿@model GenInfoMod
+@{
+    Layout = "_Layout";
+}
+
+@{
+    ViewData["Title"] = "User";
+}
+<h2>User</h2>
+@*<p>@ViewData["Message1"]</p>
+<p>@ViewData["Message"]</p>*@
+
+<p>Hello from our User View Template!</p>
+<div class =" text-right">
+    <form method="post" asp-action="Create">
+        @*<label asp-for="UserId">User ID</label>
+        <input asp-for="UserId" type="number" value="@Model.UserId" />*@
+        @*<label asp-for="City">City</label>
+        <input asp-for="City" type="text" value="@Model.City" />
+        <label asp-for="State">State</label>
+        <input asp-for="State" type="text" value="@Model.State" />
+        <label asp-for="ZipCode">ZipCode</label>
+        <input asp-for="ZipCode" type="number" value="@Model.ZipCode" />
+        <label asp-for="AnnualIncome">Annual Income</label>
+        <input asp-for="AnnualIncome" type="number" value="@Model.AnnualIncome" />*@
+
+    </form>
+</div>
+
+

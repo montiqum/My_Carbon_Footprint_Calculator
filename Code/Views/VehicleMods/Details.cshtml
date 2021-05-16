@@ -1,0 +1,63 @@
+﻿@model MyCarbonFootprintCalculator.Models.VehicleMod
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Details</h4>
+
+<div>
+    <h4>Vehicle Data</h4>
+    <hr />
+    <dl class="row">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <dt class="col-sm-2">
+                Vehicle Id
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.VehicleId)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            Number of Vehicles
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoOfVehicles)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Make)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Make)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Model)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mileage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mileage)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VehicleId">Edit</a> |
+    <a asp-controller="FoodMods" asp-action="Create">Next</a>
+    <p class="admin-index" style="margin-top: 20px;">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+        }
+    </p>
+</div>

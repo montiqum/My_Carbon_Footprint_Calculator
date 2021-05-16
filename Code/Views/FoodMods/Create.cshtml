@@ -1,0 +1,131 @@
+﻿@model MyCarbonFootprintCalculator.Models.FoodMod
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h4>Diet Data</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <p style="color:red; font-weight:bold">@ViewBag.errormessage </p>
+            <div class="form-group">
+                <label asp-for="DietType" class="control-label">Diet Type</label>
+                <select class="form-control" asp-for="DietType">
+                    <option value="null"> Select your diet type</option>
+                    <option value="Omnivore"> Omnivore</option>
+                    <option value="Pescatarian"> Pescatarian</option>
+                    <option value="Vegan"> Vegan</option>
+                    <option value="Vegetarian"> Vegetarian</option>
+                    <option value="Other"> Other</option>
+                </select>
+                <span asp-validation-for="DietType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grains" class="control-label"></label>
+                @*<input asp-for="Grains" class="form-control" />*@
+                <select class="form-control" asp-for="Grains">
+                    <option value="null"> Select grains percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Grains" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Meat" class="control-label"></label>
+                <select class="form-control" asp-for="Meat">
+                    <option value="null"> Select meat percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Meat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vegetables" class="control-label"></label>
+                <select class="form-control" asp-for="Vegetables">
+                    <option value="null"> Select vegetables percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Vegetables" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fruits" class="control-label"></label>
+                <select class="form-control" asp-for="Fruits">
+                    <option value="null"> Select fruits percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Fruits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fish" class="control-label"></label>
+                <select class="form-control" asp-for="Fish">
+                    <option value="null"> Select fish percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Fish" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Milk" class="control-label"></label>
+                <select class="form-control" asp-for="Milk">
+                    <option value="null"> Select milk percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Milk" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desserts" class="control-label"></label>
+                <select class="form-control" asp-for="Desserts">
+                    <option value="null"> Select dessert percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Desserts" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fast_foods" class="control-label">Fast food</label>
+                <select class="form-control" asp-for="Fast_foods">
+                    <option value="null"> Select fast food percentage</option>
+                    @for (int i = 0; i <= 100; i += 10)
+                    {
+                        <option value="@i"> @i %</option>
+                    }
+                </select>
+                <span asp-validation-for="Fast_foods" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Get Your Footprint >" class="btn btn-primary" />
+            </div>
+            <div>
+                @if (ViewBag.CurrentUserId == 1)
+                {
+                    <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+                }
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,76 @@
+﻿@{
+    Layout = null;
+}
+@model MyCarbonFootprintCalculator.Models.ViewModel.Register
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "/Views/Shared/_AuthLayout.cshtml";
+}
+
+@*<h1>@ViewData["Title"]</h1>
+
+    <div class="row">
+        <div class="col-md-4">*@
+<form asp-action="Register" method="post">
+    @*<h4>Create a new account.</h4>
+        <hr />*@
+    <div style="font-size:x-small; color:red;">
+            <p style="margin-top:1px; margin-bottom:0px;">@ViewBag.Result1</p>
+            <p style="margin-top:1px; margin-bottom:0px;">@ViewBag.Result2</p>
+            <p style="margin-top:1px; margin-bottom:0px;">@ViewBag.Result3</p>
+            <p style="margin-top:1px; margin-bottom:0px;">@ViewBag.Result4</p>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class=" row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control" type="text" required />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control" type="text" required />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" type="email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div style="color:red; font-size: x-small;">@ViewBag.Result</div>
+    <div class=" row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" type="password" required />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" type="password" required />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+    <div style="margin-top:10px;">
+        <a asp-action="Login" class="link-text">Already have an account? Login</a>
+    </div>
+
+</form>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

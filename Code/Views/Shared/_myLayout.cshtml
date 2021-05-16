@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyCarbonFootprintCalculator</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="wrapper">
+
+        <header class="main-header">
+            <h1>My Carbon FootPrint Calculator</h1>
+        </header>
+
+        <main class="main-body">
+            <button class="nav-bar-toggler" type="button" data-toggle="collapse" data-target=".nav-bar-collapse" aria-controls="nav-barSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="nav-bar">
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">User</a></li>
+                    <li><a href="#">House</a></li>
+                    <li><a href="#">Travel</a></li>
+                    <li><a href="#">Food</a></li>
+                    <li><a href="#">Footprint</a></li>
+                </ul>
+            </nav>
+
+            <section class="main-section">
+                <div class="left">
+
+                </div>
+
+                <div class="middle">
+                    <h3>Welcome Melanie</h3>
+                </div>
+
+                <div class="right">
+                    <form action="post">
+                        <select name="City" id="City">
+                            <option value="0">City</option>
+                            <option value="1">San Diego</option>
+                            <option value="2">Spring Valley</option>
+                        </select>
+                        <select name="State" id="State">
+                            <option value="0">State</option>
+                            <option value="1">CA</option>
+                            <option value="2">TX</option>
+                        </select>
+                    </form>
+                </div>
+
+            </section>
+
+        </main>
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2021 - MyCarbonFootprintCalculator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

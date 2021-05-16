@@ -1,0 +1,75 @@
+﻿@model MyCarbonFootprintCalculator.Models.HouseMod
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h4>Details</h4>
+
+<div>
+    <h4>HouseMod</h4>
+    <hr />
+    <dl class="row">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.HouseId)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.HouseId)
+            </dd>
+        }
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Sqft)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Sqft)
+        </dd>
+        <dt class="col-sm-2">
+            Energy Usage $
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Energy_Usage)
+        </dd>
+        <dt class="col-sm-2">
+            Energy Type
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Energy_Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Solar)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Solar)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gas)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gas)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Electric)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Electric)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.HouseId">Edit</a> |
+    <a asp-controller="VehicleMods" asp-action="Create">Next</a>
+    <p class="admin-index" style="margin-top: 20px;">
+        @if (ViewBag.CurrentUserId == 1)
+        {
+            <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
+        }
+    </p>
+</div>
