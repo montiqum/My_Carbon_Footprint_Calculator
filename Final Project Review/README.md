@@ -39,4 +39,4 @@ Almost everything. It was a whole learning experience, even the C#.
 I was lucky to have people to help me through this cohort. I feel like everyone was good at something, and where they were weak another individual was strong in the area. I think this definitely demonstrated team work and showed that everyone brings something to the table.
 
 #### - What would you change / what do you know now that you wish you knew "then"?
-I would definitely change these Model names in my project. I wish we could do a deeper dive into APIs, and I wish the Cohort was a tad bit longer. I one day hope to be a proficient full stack developer and that's my focus.
+I would definitely change the Model names in my project. I wish we could do a deeper dive into APIs, and I wish the cohort was a tad bit longer. I one day hope to be a proficient full stack developer and that's my focus.
