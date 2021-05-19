@@ -78,7 +78,7 @@ namespace MyCarbonFootprintCalculator.Controllers
             var currentUser = (User) _userManager.Users.Where(x => x.Email.Equals(userId)).Single();
             // takes the currentUser object and then pulls only the first and last name separated by a space
             ViewBag.CurrentUser = currentUser.FirstName + " " + currentUser.LastName;           
-            ViewBag.CurrentUserId = currentUser.Id;
+            ViewBag.CurrentUserId = (currentUser.Id * 25689) / 3;
             //_userManager.AddToRoleAsync(currentUser, "Admin");
             var test = _context.GenInfo.Where(u => u.UserId.Equals(currentUser.Id));
            

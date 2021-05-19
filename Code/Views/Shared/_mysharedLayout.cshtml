@@ -11,14 +11,19 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Rancho&effect=fire|fire-animation" />
     @*<link rel="stylesheet" href="~/css/site.css" />*@
     @RenderSection("link1", false)
+
 </head>
-<body>
-    <header class="main-header">
+<body style="grid-template-rows: 80px 10px 80px 250px 15px; grid-template-columns: 50px 50px 50px 50px 50px 50px;">
+    <header class="main-header" style="grid-area:1/1/2/7;">
         <h1>My Carbon FootPrint Calculator</h1>
     </header>
-    <nav class="navbar navbar-expand" style="background-color:lightgoldenrodyellow">
+    <div style="grid-area:2/6/3/7 !important; font-size:medium; font-family:cursive; background-color:blue; float:right; color:white !important; border-radius:5px;">
+        <a asp-controller="Account" asp-action="Logout" >Logout</a>
+    </div>
+        
+    <nav class="navbar navbar-expand" style="grid-area:3/1/4/7; background-color:lightgoldenrodyellow">
         <div class="container">
-            <ul class=" navbar-nav">
+            <ul class=" navbar-nav"
                 <li class="nav-item">
                     <a class="nav-link text-dark" style="padding-right:65px; padding-left:65px" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
                 </li>
@@ -41,13 +46,13 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" style="grid-area: 4/1/5/7;">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="border-top footer text-muted" style="grid-area:5/1/6/7 !important;">
         <div class="container">
             &copy; 2021 - MyCarbonFootprintCalculator - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

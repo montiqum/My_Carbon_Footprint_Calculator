@@ -6,8 +6,8 @@
 
 <h4>Diet Data</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
+<div class="row" style="grid-template-rows: 1fr; grid-template-columns: 800px 1fr;">
+    <div class="col-md-4" style="grid-area: 1/1/2/2">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <p style="color:red; font-weight:bold">@ViewBag.errormessage </p>
@@ -30,8 +30,7 @@
                     <option value="null"> Select grains percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Grains" class="text-danger"></span>
             </div>
@@ -41,8 +40,7 @@
                     <option value="null"> Select meat percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Meat" class="text-danger"></span>
             </div>
@@ -52,8 +50,7 @@
                     <option value="null"> Select vegetables percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Vegetables" class="text-danger"></span>
             </div>
@@ -63,8 +60,7 @@
                     <option value="null"> Select fruits percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Fruits" class="text-danger"></span>
             </div>
@@ -74,8 +70,7 @@
                     <option value="null"> Select fish percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Fish" class="text-danger"></span>
             </div>
@@ -85,8 +80,7 @@
                     <option value="null"> Select milk percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Milk" class="text-danger"></span>
             </div>
@@ -96,8 +90,7 @@
                     <option value="null"> Select dessert percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Desserts" class="text-danger"></span>
             </div>
@@ -107,8 +100,7 @@
                     <option value="null"> Select fast food percentage</option>
                     @for (int i = 0; i <= 100; i += 10)
                     {
-                        <option value="@i"> @i %</option>
-                    }
+        <option value="@i"> @i %</option>}
                 </select>
                 <span asp-validation-for="Fast_foods" class="text-danger"></span>
             </div>
@@ -118,11 +110,14 @@
             <div>
                 @if (ViewBag.CurrentUserId == 1)
                 {
-                    <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@
-                }
+    <a asp-action="Index">Back to List</a> @*don't want regular users to have access*@}
             </div>
         </form>
     </div>
+    <a href="https://www.greeneatz.com/foods-carbon-footprint.html" target="_blank" style="margin-top:5px; margin-left:300px; padding-left:20px; grid-area:1/2/2/3;">
+        <img alt="Qries" src="/images/foodinfo.png"
+             style="width:350px; height:400px; border-radius:10px; border-color:blue; border-width:5px; border-style:double;">
+    </a>
 </div>
 
 

@@ -11,12 +11,12 @@
         <div class="col-md-4">*@
 <section>
     <form id="account" method="post">
-        <h4>Use a local account to log in.</h4>
+        <h4>Log in to get your footprint</h4>
         <a style="color:red; text-decoration:solid">@ViewBag.Result</a>
         <hr />
         <div asp-validation-summary="All" class="text-danger"></div>
         <div class="form-group">
-            <label asp-for="UserName"></label>
+            <label asp-for="UserName">Username</label>
             <input asp-for="UserName" class="form-control" />
             <span asp-validation-for="UserName" class="text-danger" type="email" placeholder="Email" required"></span>
         </div>
