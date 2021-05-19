@@ -13,6 +13,7 @@ An overview of building a web application from scratch. My trials and tribulatio
 
 ### 2. Code and architecture walk-through
 [Code](https://github.com/montiqum/My_Carbon_Footprint_Calculator/tree/main/Code)
+
 I used some of every component taught in the course including:
 - C#
 - SQL
